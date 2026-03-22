@@ -351,17 +351,19 @@ h1 em { font-style: italic; color: var(--accent); }
 .feature:hover { background: rgba(255,255,255,0.65); }
 
 .feature-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 3.6rem;
   color: var(--dark);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1;
   margin-bottom: 1.4rem;
   letter-spacing: -0.02em;
 }
 
 .feature-num span {
-  font-size: 2rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
   color: var(--accent);
 }
 
