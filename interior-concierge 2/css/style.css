@@ -51,8 +51,8 @@ nav {
 }
 
 .logo-sub {
-  font-size: 0.6rem;
-  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
   color: var(--mid);
   font-weight: 300;
   margin-top: 2px;
@@ -112,8 +112,8 @@ nav ul li a {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 2rem;
@@ -129,21 +129,22 @@ nav ul li a {
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 4rem;
-  line-height: 1.2;
+  line-height: 1.28;
   font-weight: 400;
   margin-bottom: 1.8rem;
   letter-spacing: -0.01em;
+  font-feature-settings: "palt";
 }
 
 h1 em { font-style: italic; color: var(--accent); }
 
 .hero-desc {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--mid);
-  line-height: 2.2;
+  line-height: 2.1;
   font-weight: 300;
   margin-bottom: 2.8rem;
-  max-width: 360px;
+  max-width: 380px;
 }
 
 .hero-btns {
@@ -193,11 +194,22 @@ h1 em { font-style: italic; color: var(--accent); }
 .photo-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(160deg, #CBC3B9 0%, #A89F95 100%);
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 2.5rem;
+  position: relative;
+}
+
+.photo-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(30,27,23,0.18) 0%, rgba(30,27,23,0.35) 100%);
+  pointer-events: none;
 }
 
 /* Hero stat pill */
@@ -210,6 +222,8 @@ h1 em { font-style: italic; color: var(--accent); }
   align-items: baseline;
   gap: 0.7rem;
   backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 1;
 }
 
 .hero-stat-num {
@@ -225,9 +239,9 @@ h1 em { font-style: italic; color: var(--accent); }
 }
 
 .hero-stat-label {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   color: var(--mid);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   font-weight: 300;
 }
 
@@ -237,6 +251,8 @@ h1 em { font-style: italic; color: var(--accent); }
   flex-direction: column;
   gap: 0.7rem;
   align-items: flex-start;
+  position: relative;
+  z-index: 1;
 }
 
 .photo-badge {
@@ -253,8 +269,8 @@ h1 em { font-style: italic; color: var(--accent); }
 }
 
 .badge-brand {
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 0.3rem;
@@ -373,8 +389,8 @@ h1 em { font-style: italic; color: var(--accent); }
 }
 
 .eyebrow {
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent);
   display: flex;
@@ -475,19 +491,15 @@ h1 em { font-style: italic; color: var(--accent); }
   justify-content: center;
 }
 
-.case-img--1 { background: linear-gradient(145deg, #C9C0B8, #B5ADA5); }
-.case-img--2 { background: linear-gradient(145deg, #BDB8B0, #A8A09A); }
-.case-img--3 { background: linear-gradient(145deg, #C4BDB6, #B0A8A2); }
-.case-img--4 { background: linear-gradient(145deg, #CCC6BC, #B8B2A8); }
-.case-img--5 { background: linear-gradient(145deg, #C0BAB2, #ACA69E); }
-.case-img--6 { background: linear-gradient(145deg, #C8C1BA, #B4ADA6); }
+.case-img--1 { background-image: url('../images/case-01.jpg'); background-size: cover; background-position: center; }
+.case-img--2 { background-image: url('../images/case-02.jpg'); background-size: cover; background-position: center; }
+.case-img--3 { background-image: url('../images/case-03.jpg'); background-size: cover; background-position: center; }
+.case-img--4 { background-image: url('../images/case-04.jpg'); background-size: cover; background-position: center; }
+.case-img--5 { background-image: url('../images/case-05.jpg'); background-size: cover; background-position: center; }
+.case-img--6 { background-image: url('../images/case-06.jpg'); background-size: cover; background-position: center; }
 
 .case-img-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-  font-weight: 300;
+  display: none;
 }
 
 .case-body {
@@ -496,8 +508,8 @@ h1 em { font-style: italic; color: var(--accent); }
 
 .case-brand {
   display: inline-block;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 500;
@@ -528,9 +540,9 @@ h1 em { font-style: italic; color: var(--accent); }
 }
 
 .case-meta {
-  font-size: 0.66rem;
+  font-size: 0.72rem;
   color: var(--mid);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   font-weight: 300;
 }
 
@@ -561,8 +573,8 @@ h1 em { font-style: italic; color: var(--accent); }
 .form-field.full { grid-column: 1 / -1; }
 
 .form-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
   color: var(--mid);
   font-weight: 500;
   text-transform: uppercase;
@@ -707,10 +719,10 @@ h1 em { font-style: italic; color: var(--accent); }
 
 .form-note {
   margin-top: 1rem;
-  font-size: 0.66rem;
+  font-size: 0.72rem;
   color: var(--mid);
   text-align: center;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   font-weight: 300;
 }
 
@@ -887,9 +899,9 @@ h1 em { font-style: italic; color: var(--accent); }
 
 .footer-note {
   margin-top: 1.4rem;
-  font-size: 0.66rem;
-  color: rgba(255,255,255,0.16);
-  letter-spacing: 0.15em;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.22);
+  letter-spacing: 0.12em;
 }
 
 /* ── SITE FOOTER ─────────────────────────────── */
@@ -922,10 +934,10 @@ h1 em { font-style: italic; color: var(--accent); }
 }
 
 .site-footer-col-title {
-  font-size: 0.6rem;
-  letter-spacing: 0.25em;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.38);
   margin-bottom: 1.4rem;
   font-weight: 500;
 }
@@ -984,9 +996,9 @@ h1 em { font-style: italic; color: var(--accent); }
   max-width: 1160px;
   margin: 0 auto;
   padding: 1.6rem 0;
-  font-size: 0.64rem;
-  letter-spacing: 0.12em;
-  color: rgba(255,255,255,0.18);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.22);
   font-weight: 300;
 }
 
